@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markell · May Month Ahead · May 2, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e0c0a;--bone:#f5f0e8;--parchment:#ede5d4;--gold:#c9943a;--gold-light:#e8c67a;--gold-dim:#8a6520;--rust:#8b3a1a;--plum:#5c2d5e}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--bone);font-family:"Cormorant Garamond",serif;font-size:18px;line-height:1.7;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.25}
+.starfield{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.star{position:absolute;width:2px;height:2px;background:var(--gold-light);border-radius:50%;opacity:0;animation:twinkle var(--dur,4s) var(--delay,0s) infinite}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(1)}50%{opacity:var(--bright,.6);transform:scale(1.5)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:linear-gradient(to bottom,rgba(14,12,10,.96),transparent);padding:1.2rem 2.5rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:"Cinzel Decorative",serif;font-size:.85rem;color:var(--gold);letter-spacing:.2em;text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-family:"DM Mono",monospace;font-size:.65rem;color:var(--gold-dim);text-decoration:none;letter-spacing:.15em;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:var(--gold-light)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:6rem 2rem 4rem;z-index:1}
+.hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(ellipse,rgba(201,148,58,.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;animation:pulse-glow 6s ease-in-out infinite}
+@keyframes pulse-glow{0%,100%{opacity:.6;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}}
+.hero-eyebrow{font-family:"DM Mono",monospace;font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:0;animation:fade-up 1s .3s forwards}
+.hero-greeting{font-size:clamp(1.1rem,3vw,1.4rem);font-weight:300;font-style:italic;color:var(--parchment);margin-bottom:.5rem;opacity:0;animation:fade-up 1s .5s forwards}
+.hero-name{font-family:"Cinzel Decorative",serif;font-size:clamp(2.8rem,8vw,5.5rem);font-weight:700;color:var(--gold);line-height:1.1;margin-bottom:1rem;opacity:0;animation:fade-up 1s .7s forwards;text-shadow:0 0 60px rgba(201,148,58,.3)}
+.hero-sub{font-size:clamp(1rem,2.5vw,1.25rem);font-weight:300;color:rgba(245,240,232,.6);margin-bottom:3rem;opacity:0;animation:fade-up 1s .9s forwards}
+.hero-date-pill{display:inline-flex;align-items:center;gap:.6rem;font-family:"DM Mono",monospace;font-size:.7rem;letter-spacing:.2em;color:var(--gold-dim);border:1px solid rgba(201,148,58,.3);padding:.5rem 1.2rem;border-radius:2rem;margin-bottom:4rem;opacity:0;animation:fade-up 1s 1.1s forwards}
+.hero-date-pill::before{content:"◆";color:var(--gold);font-size:.5rem}
+.scroll-cue{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fade-up 1s 1.5s forwards}
+.scroll-cue span{font-family:"DM Mono",monospace;font-size:.55rem;letter-spacing:.3em;color:var(--gold-dim);text-transform:uppercase}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold-dim),transparent);animation:scroll-drop 2s ease-in-out infinite}
+@keyframes scroll-drop{0%{transform:scaleY(0);transform-origin:top;opacity:1}50%{transform:scaleY(1);transform-origin:top;opacity:1}51%{transform:scaleY(1);transform-origin:bottom;opacity:1}100%{transform:scaleY(0);transform-origin:bottom;opacity:0}}
+@keyframes fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reader-section{position:relative;z-index:1;padding:5rem 2rem;max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.sigil-wrap{display:flex;justify-content:center}
+.sigil-ring{position:relative;width:220px;height:220px;border-radius:50%;border:1px solid rgba(201,148,58,.3);display:flex;align-items:center;justify-content:center}
+.sigil-ring::before{content:"";position:absolute;inset:8px;border-radius:50%;border:1px solid rgba(201,148,58,.15)}
+.sigil-inner{width:148px;height:148px;border-radius:50%;background:radial-gradient(ellipse at 40% 35%,rgba(201,148,58,.25),rgba(92,45,94,.2),rgba(14,12,10,.9));display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(201,148,58,.25);animation:sigil-glow 6s ease-in-out infinite}
+@keyframes sigil-glow{0%,100%{box-shadow:0 0 30px rgba(201,148,58,.15),inset 0 0 20px rgba(92,45,94,.1)}50%{box-shadow:0 0 50px rgba(201,148,58,.25),inset 0 0 30px rgba(92,45,94,.2)}}
+.orbit{position:absolute;width:220px;height:220px;animation:orbit-spin var(--speed,8s) linear infinite}
+.orbit-dot{position:absolute;width:5px;height:5px;background:var(--gold);border-radius:50%;top:-2.5px;left:50%;transform:translateX(-50%);box-shadow:0 0 8px var(--gold)}
+@keyframes orbit-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.sigil-initial{font-family:"Cinzel Decorative",serif;font-size:3.2rem;color:var(--gold);line-height:1;text-shadow:0 0 30px rgba(201,148,58,.5)}
+.sigil-title{font-family:"DM Mono",monospace;font-size:.5rem;letter-spacing:.25em;color:var(--gold-dim);text-transform:uppercase;margin-top:.3rem}
+.reader-bio h2{font-family:"Cinzel Decorative",serif;font-size:1rem;color:var(--gold);letter-spacing:.15em;margin-bottom:.3rem}
+.reader-bio .reader-tag{font-family:"DM Mono",monospace;font-size:.6rem;color:var(--gold-dim);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem}
+.reader-bio p{font-size:.95rem;color:rgba(245,240,232,.75);line-height:1.8;margin-bottom:1rem}
+.deck-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.deck-badge{font-family:"DM Mono",monospace;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;padding:.3rem .7rem;border-radius:2rem;border:1px solid currentColor}
+.deck-badge.len{color:#5a9fd4;border-color:rgba(90,159,212,.4);background:rgba(90,159,212,.05)}
+.deck-badge.kip{color:#b07fd4;border-color:rgba(176,127,212,.4);background:rgba(176,127,212,.05)}
+.deck-badge.tar{color:#6ab89a;border-color:rgba(106,184,154,.4);background:rgba(106,184,154,.05)}
+.deck-badge.ora{color:#d4845a;border-color:rgba(212,132,90,.4);background:rgba(212,132,90,.05)}
+.section-divider{display:flex;align-items:center;gap:1rem;max-width:900px;margin:0 auto 3rem;padding:0 2rem}
+.divider-line{flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,148,58,.3),transparent)}
+.divider-glyph{color:var(--gold);font-size:.7rem}
+.before-card{position:relative;z-index:1;max-width:900px;margin:0 auto 5rem;padding:0 2rem}
+.before-inner{background:linear-gradient(135deg,rgba(201,148,58,.07),rgba(92,45,94,.07));border:1px solid rgba(201,148,58,.2);border-radius:4px;padding:3rem;position:relative;overflow:hidden}
+.before-inner::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--plum),var(--gold),var(--rust))}
+.before-label{font-family:"DM Mono",monospace;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1.2rem}
+.before-inner p{font-size:1rem;color:rgba(245,240,232,.85);line-height:1.9;margin-bottom:1rem}
+.before-inner p:last-child{margin-bottom:0}
+.reading-main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 2rem 5rem}
+.layer-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:2.5rem}
+.layer-number{font-family:"Cinzel Decorative",serif;font-size:2.5rem;color:rgba(201,148,58,.2);line-height:1;min-width:2.5rem}
+.layer-info h2{font-family:"Cinzel Decorative",serif;font-size:1.1rem;color:var(--gold);margin-bottom:.2rem}
+.layer-info p{font-family:"DM Mono",monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dim)}
+.layer-bar{height:2px;border-radius:1px;flex:1}
+.layer-bar.len{background:linear-gradient(to right,#1e3a5f,#5a9fd4,transparent)}
+.layer-bar.kip{background:linear-gradient(to right,#5c2d5e,#b07fd4,transparent)}
+.layer-bar.tar{background:linear-gradient(to right,#1a3d2e,#6ab89a,transparent)}
+.layer-bar.ora{background:linear-gradient(to right,#5c2a0e,#d4845a,transparent)}
+.layer-bar.syn{background:linear-gradient(to right,var(--gold-dim),var(--gold),transparent)}
+.reading-block{margin-bottom:5rem}
+.reading-text{margin-top:1rem}
+.reading-section{margin-bottom:2.8rem;padding-bottom:2.8rem;border-bottom:1px solid rgba(201,148,58,.07)}
+.reading-section:last-child{border-bottom:none;padding-bottom:0}
+.section-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:"DM Mono",monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}
+.section-tag::before{content:"◈"}
+.section-tag.len{color:#5a9fd4}.section-tag.kip{color:#b07fd4}.section-tag.tar{color:#6ab89a}.section-tag.ora{color:#d4845a}
+.section-tag.syn{color:var(--gold)}.section-tag.syn::before{content:"✦"}.section-tag.note{color:rgba(201,148,58,.5)}
+.reading-section h3{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:500;color:var(--bone);margin-bottom:1.2rem;line-height:1.4}
+.guidebook{border-left:2px solid rgba(201,148,58,.22);padding:1.2rem 1.5rem;margin-bottom:1.8rem;background:rgba(201,148,58,.03);border-radius:0 4px 4px 0}
+.guidebook-label{font-family:"DM Mono",monospace;font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.7rem}
+.guidebook p{font-size:.94rem;font-style:italic;color:rgba(245,240,232,.7);line-height:1.85;margin-bottom:.8rem}
+.guidebook p:last-child{margin-bottom:0}
+.reading-section p{font-size:.97rem;color:rgba(245,240,232,.85);line-height:1.9;margin-bottom:1rem}
+.reading-section p:last-child{margin-bottom:0}
+.reading-section strong{color:var(--bone);font-weight:600}
+.reading-section em{color:var(--gold-light);font-style:italic}
+.callout{border-left:2px solid var(--gold);padding:1rem 1.5rem;margin:1.5rem 0;background:rgba(201,148,58,.04);border-radius:0 4px 4px 0}
+.callout p{font-size:1.02rem!important;font-style:italic;color:var(--bone)!important;margin:0!important;line-height:1.75!important}
+blockquote.card-quote{border-left:2px solid rgba(201,148,58,.4);padding:1rem 1.5rem;margin:1.2rem 0 1.8rem;background:rgba(201,148,58,.03);border-radius:0 4px 4px 0;font-style:italic}
+blockquote.card-quote p{color:rgba(245,240,232,.72)!important;font-size:.92rem;line-height:1.8;margin:0 0 .6rem!important}
+blockquote.card-quote p:last-of-type{margin-bottom:.5rem!important}
+blockquote.card-quote p.card-orientation{color:var(--gold-dim)!important;font-size:.85rem;font-family:"DM Mono",monospace;font-style:normal;letter-spacing:.02em;margin-top:.5rem!important}
+blockquote.card-quote cite{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,148,58,.45);font-style:normal;font-family:"DM Mono",monospace;margin-top:.6rem}
+.pairs-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+.pairs-table th{font-family:"DM Mono",monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dim);padding:.5rem .8rem;text-align:left;border-bottom:1px solid rgba(201,148,58,.2)}
+.pairs-table td{padding:.65rem .8rem;color:rgba(245,240,232,.75);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:top;font-size:.88rem;line-height:1.65}
+.pairs-table tr:last-child td{border-bottom:none}
+.pair-cards{font-family:"Cormorant Garamond",serif;font-weight:600;color:var(--bone);white-space:nowrap;font-size:.92rem}
+.pair-cards .plus{color:var(--gold-dim);font-weight:300;margin:0 .2rem}
+.ci{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500}
+.ci.len{color:#7ab8e8}.ci.kip{color:#c4a0e0}.ci.tar{color:#8fd4b4}.ci.ora{color:#e8a87a}
+.inner-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin:1.5rem 0 2rem}
+.inner-col h4{font-family:"DM Mono",monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem}
+.inner-col.tar h4{color:#6ab89a}.inner-col.ora h4{color:#d4845a}
+.card-line{font-family:"DM Mono",monospace;font-size:.58rem;color:var(--gold-dim);letter-spacing:.1em;margin-bottom:.6rem}
+.card-line em{font-family:"Cormorant Garamond",serif;font-size:.95rem;font-style:italic;color:var(--bone);display:block;margin-top:.15rem}
+footer{position:relative;z-index:1;text-align:center;padding:4rem 2rem 3rem;border-top:1px solid rgba(201,148,58,.1);margin-top:2rem}
+footer .footer-logo{font-family:"Cinzel Decorative",serif;font-size:1.2rem;color:var(--gold);margin-bottom:.5rem}
+footer p{font-family:"DM Mono",monospace;font-size:.6rem;color:rgba(201,148,58,.3);letter-spacing:.2em}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;will-change:opacity,transform}
+.reveal.visible{opacity:1;transform:translateY(0);will-change:auto}
+@media(max-width:700px){.reader-section{grid-template-columns:1fr;gap:2rem}.inner-cols{grid-template-columns:1fr}nav{padding:1rem 1.5rem}.nav-links{display:none}}.deck-opener{position:relative;width:100%;max-width:700px;margin:0 auto 0;overflow:hidden;border-radius:6px;border:1px solid rgba(201,148,58,.18)}.deck-opener img{width:100%;display:block;object-fit:cover;object-position:center 35%;max-height:340px;filter:brightness(.82) saturate(.88)}.deck-opener::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,12,10,0) 55%,rgba(14,12,10,.7) 100%)}.deck-opener-label{position:absolute;bottom:.8rem;right:1rem;font-family:"DM Mono",monospace;font-size:.48rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,148,58,.55)}
+.spread-photo-wrap{position:relative;margin-bottom:2rem;border-radius:8px;overflow:hidden;border:1px solid rgba(201,148,58,.18);cursor:zoom-in;background:var(--ink)}
+.spread-photo-wrap img{width:100%;display:block;transition:filter .4s;filter:contrast(1.12) saturate(1.18) brightness(.93) sepia(.06)}
+.spread-photo-wrap:hover img{filter:contrast(1.18) saturate(1.28) brightness(.98) sepia(.04)}
+.spread-photo-wrap::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,transparent 55%,rgba(14,12,10,.55));pointer-events:none}
+.spread-photo-caption{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.4rem;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;background:linear-gradient(to top,rgba(14,12,10,.75),transparent)}
+.caption-label{font-family:"DM Mono",monospace;font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.55)}
+.caption-tap{font-family:"DM Mono",monospace;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,148,58,.45)}
+.spread-photo-wrap.zoomed{position:fixed;inset:0;z-index:500;border-radius:0;border:none;cursor:zoom-out;display:flex;align-items:center;justify-content:center;background:rgba(10,8,6,.97);margin:0}
+.spread-photo-wrap.zoomed img{width:auto;height:auto;max-width:96vw;max-height:94vh;filter:contrast(1.15) saturate(1.22) brightness(1) sepia(.03);object-fit:contain}
+.spread-photo-wrap.zoomed::after{display:none}
+.spread-photo-wrap.zoomed .spread-photo-caption{display:none}
+.pdf-btn{font-family:"DM Mono",monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dim);background:transparent;border:1px solid rgba(201,148,58,.25);padding:.35rem .8rem;border-radius:2px;cursor:pointer;transition:all .3s;flex-shrink:0}
+.pdf-btn:hover{color:var(--gold);border-color:rgba(201,148,58,.5)}
+@media print{nav,body::before,.starfield,.scroll-cue{display:none!important}.hero{min-height:auto;padding:3rem 2rem 2rem}.reading-main,.reading-block{break-inside:avoid}.reveal{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<nav>
+  <a href="#" class="nav-logo">J A Y L O N</a>
+  <ul class="nav-links"><li><a href="#may-tarot">Tarot</a></li><li><a href="#may-lenormand">Lenormand</a></li><li><a href="#may-kipper">Kipper</a></li><li><a href="#may-oracle">Oracle</a></li><li><a href="#synthesis">Synthesis</a></li></ul>
+  <button class="pdf-btn" onclick="window.print()">↓ Save PDF</button>
+</nav>
+<section class="hero">
+  <div class="hero-glow"></div>
+  <p class="hero-eyebrow">May Month Ahead</p>
+  <p class="hero-greeting">prepared with care for</p>
+  <h1 class="hero-name">Markell</h1>
+  <p class="hero-sub">Tarot · Lenormand · Kipper · Oracle &nbsp;·&nbsp; May 2, 2026</p>
+  <div class="hero-date-pill">May 2, 2026 &nbsp;·&nbsp; Prepared by Jaylon</div>
+  <div class="scroll-cue"><span>Read On</span><div class="scroll-line"></div></div>
+</section>
+<section class="deck-opener">
+  <img src="May-Month-Ahead-Opening.jpg" alt="May Month Ahead" loading="eager">
+  <span class="deck-opener-label">Prepared by Jaylon</span>
+</section>
+<section class="reader-section reveal">
+  <div class="sigil-wrap">
+    <div class="sigil-ring">
+      <div class="orbit" style="--speed:12s"><div class="orbit-dot"></div></div>
+      <div class="orbit" style="--speed:20s;width:180px;height:180px;top:20px;left:20px"><div class="orbit-dot" style="background:#b07fd4;box-shadow:0 0 8px #b07fd4"></div></div>
+      <div class="sigil-inner">
+        <div class="sigil-initial">J</div>
+        <div class="sigil-title">Reader</div>
+      </div>
+    </div>
+  </div>
+  <div class="reader-bio">
+    <h2>Jaylon</h2>
+    <div class="reader-tag">Lenormand · Kipper · Tarot · Oracle</div>
+    <p>I use a few different decks in these readings because each one shows a different angle of what's going on — like getting a second opinion from a friend who sees things differently than the first one. I'll tell you what each card means as we go, so nothing feels like it came out of nowhere. If you have questions about why I'm reading something a certain way, ask — the point is for this to make sense to you, not just for me to hand you a list of things I see.</p>
+    <div class="deck-badges"><span class="deck-badge tar">Tarot</span><span class="deck-badge len">Lenormand</span><span class="deck-badge kip">Kipper</span><span class="deck-badge ora">Citadel Oracle</span></div>
+  </div>
+</section>
+
+<div class="section-divider"><div class="divider-line"></div><div class="divider-glyph">◆</div><div class="divider-line"></div></div>
+<div class="before-card reveal"><div class="before-inner"><div class="before-label">Your Question · Context</div><p>Channeled Song: &quot;16 CARRIAGES&quot; by Beyonce.</p></div></div>
+<div class="section-divider"><div class="divider-line"></div><div class="divider-glyph">✦</div><div class="divider-line"></div></div>
+<main class="reading-main">
+
+
+<div class="reading-block reveal" id="may-tarot">
+  <div class="layer-header">
+    <div class="layer-number">01</div>
+    <div class="layer-info"><h2>The Inner Frame</h2><p>trueblack tarot · the theme & the soul lesson</p></div>
+    <div class="layer-bar tar"></div>
+  </div>
+  <div class="spread-photo-wrap"><img src="TrueBlack-Positions.jpg" alt="TrueBlack Tarot positions for May" loading="lazy"><div class="spread-photo-caption"><span class="caption-label">Tarot · The Inner Frame</span><span class="caption-tap">tap to zoom</span></div></div>
+  <div class="reading-text">
+    <div class="reading-section">
+      <div class="section-tag tar">Position 1 · The Theme</div>
+      <h3>You're Already on the Hill — Now Hold It</h3>
+      <p>Markell, the Tarot cards I'm using are from a deck called TrueBlack. Every card is printed on deep black paper and the images emerge from the dark — it's the most visually striking deck I own, and it tends to pull toward inner, contemplative questions. Here's what yours is saying.</p>
+      <p>Your theme card for May is the <span class="ci tar">Seven of Wands</span>. In Tarot, the Seven of Wands is about standing your ground when you've already climbed to a position and now people or circumstances are pushing back. Picture someone standing at the top of a slope, staff in hand, with six more staffs jabbing up from below. You got here. But getting here wasn't the whole job — staying here is.</p>
+      <p>This tells me May is fundamentally a month of defense and assertion. Not starting something new. Not exploring. Holding a position you've already earned and refusing to be knocked off of it. The pushback might come from people who question your choices, from your own second-guessing, from logistics that make the path you've chosen feel harder than it should be. The Seven of Wands doesn't care why the challenge is happening. It says: <em>you have the higher ground, and the only way you lose it is if you step down voluntarily.</em></p>
+      <p>And listen, Beyoncé's "16 Carriages" came through as your channeled song for a reason. That song is about someone who has worked relentlessly since they were young, who's given everything to a path and is now standing in the exhaustion and the triumph of it at the same time. <em>"Sixteen carriages driving away while I watch them ride with my dreams away."</em> The fear isn't failure — it's that everything you've built might move on without you, that the pace of the world doesn't respect what it cost you to get here. The Seven of Wands says: the carriages haven't left. You're still driving. But you need to grip the reins this month, not just hope the horses know the way.</p>
+      <div class="callout"><p>May isn't asking you to prove yourself. It's asking you to stop apologizing for the ground you're standing on.</p></div>
+    </div>
+    <div class="reading-section">
+      <div class="section-tag tar">Position 5 · Soul Lesson</div>
+      <h3>Look at What You've Been Waving Away</h3>
+      <p>Your soul lesson card is the <span class="ci tar">Four of Cups, reversed</span>. Let me explain what this means. The Four of Cups upright shows a person sitting under a tree with three cups in front of them, arms crossed, while a fourth cup floats in the air being offered by a mysterious hand. It's the card of apathy, of "I see the options in front of me but none of them interest me." Basically, spiritual boredom or emotional shutdown — you're so checked out that you can't even register what's being handed to you.</p>
+      <p>Now, "reversed" in Tarot means the card was drawn upside down, which shifts its energy. In this case, the reversal means you're <em>waking up from that apathy.</em> You're starting to turn your head and actually look at the cup that's been floating there. Something you've been dismissing, ignoring, or refusing to feel is now asking for your attention, and the growth edge this month is in letting it land.</p>
+      <p>Here's the real talk, Markell. The Seven of Wands as your theme says you're in fighter mode, defending your position. And that fighter stance is valid. But the Four of Cups reversed says the inner work is about noticing what your defensive posture has made you blind to. When you're holding a staff and bracing for impact, your peripheral vision narrows. Something good, something emotionally real, something that wants to reach you has been hovering at the edge of your awareness, and you've been too busy holding the line to look at it.</p>
+      <p>The soul lesson isn't "drop your guard." It's "defend your ground <em>and</em> stay soft enough to receive what's trying to reach you." Those two things are not in conflict. You can hold a boundary with one hand and accept a gift with the other.</p>
+      <div class="callout"><p>The spiritual assignment for May: stop confusing alertness with closure. You can be watchful without being shut down.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="reading-block reveal" id="may-oracle">
+  <div class="layer-header">
+    <div class="layer-number">02</div>
+    <div class="layer-info"><h2>The Oracle Frame</h2><p>citadel oracle · what's emerging, the warning & spirit's addition</p></div>
+    <div class="layer-bar ora"></div>
+  </div>
+  <div class="spread-photo-wrap"><img src="Oracle-Positions.jpg" alt="Citadel Oracle positions for May" loading="lazy"><div class="spread-photo-caption"><span class="caption-label">Citadel Oracle · The Oracle Frame</span><span class="caption-tap">tap to zoom</span></div></div>
+  <div class="reading-text">
+    <div class="reading-section">
+      <div class="section-tag ora">Position 2 · What's Emerging</div>
+      <h3>The Permission to Go Quiet</h3>
+      <blockquote class="card-quote"><p>Not all sleep is rest, and not all rest is sleep. The Sleeper drifts through the Citadel's quieter hours in a state between knowing and not-knowing -- sometimes recovering genuine energy, sometimes simply avoiding the waking world. This card asks which kind of sleep is happening: the necessary rest before a new effort, or the unconscious avoidance of a confrontation that cannot be indefinitely deferred.</p><p class="card-orientation">UPRIGHT: Genuine rest is needed and you should not feel guilty for taking it. The body and mind need time to process, recover, and integrate before the next effort. What feels like inaction is actually preparation. Trust the rest.</p><cite>— The Citadel Oracle</cite></blockquote>
+      <p>The <span class="ci ora">Sleeper, upright</span>, is emerging into your month. The Citadel Oracle is a deck of archetypes — characters you might find in a strange, walled city — and each one represents an energy that's active in your life. The Sleeper is exactly what it sounds like: a figure in the space between wakefulness and dreaming. Upright, it means the rest is real and earned, not avoidance.</p>
+      <p>Now, this might feel like it contradicts the Seven of Wands — that card said "hold your ground, stay sharp, defend." And now The Sleeper walks in and says "rest is entering your life." But listen carefully: what's <em>emerging</em> is not always what's happening on the surface. This card sits in the position of something new entering your awareness. What's new isn't that you're tired — you already know you're tired. What's new is the possibility of letting yourself actually rest without treating it like failure.</p>
+      <p>Think about it like this: a soldier on a hill can rotate shifts. You don't have to be in battle stance every waking hour to hold the position. The Sleeper emerging in May says that some part of you is ready to integrate everything that's happened recently — to let the body and the psyche catch up with where life has moved. The New Moon in Taurus on May 16th is speaking directly to this: Taurus energy is about the body, about comfort, about planting your feet on solid earth and saying "I'm allowed to feel good here." That's The Sleeper's invitation. Preparation that looks like stillness.</p>
+      <div class="callout"><p>What's emerging isn't laziness. It's your system finally asking for the processing time it's been denied.</p></div>
+    </div>
+    <div class="reading-section">
+      <div class="section-tag ora">Position 6 · The Warning</div>
+      <h3>The Blade That Doesn't Know When to Stop</h3>
+      <blockquote class="card-quote"><p>Silent footfalls, a cloak pulled close, a task assigned and accepted without sentiment. The Assassin of the Citadel acts where others hesitate -- not out of cruelty, but out of an absolute clarity of purpose. They know that some problems do not respond to diplomacy, and that delayed action often costs more than swift, decisive action ever would.</p><p class="card-orientation">REVERSED: You have gone too far -- cut too many ties, burned too many bridges, acted without considering the collateral damage. Ruthlessness has become its own problem. The work now is to rebuild, not to cut further.</p><cite>— The Citadel Oracle</cite></blockquote>
+      <p>The <span class="ci ora">Assassin, reversed</span>. In the Citadel Oracle, when a card falls reversed — upside down — it doesn't mean the opposite of the card. It means the shadow side or the excess of that energy. So the Assassin upright is someone with precise, clean decisiveness. Reversed? The cutting has gone too far.</p>
+      <p>Markell, this is the warning position. This is what could go sideways in May if you're not watching for it. And it's a direct shadow of the Seven of Wands energy. Here's the risk: you're in defensive mode, you're holding your ground, and somewhere in that process, the line between "protecting yourself" and "cutting people out preemptively" blurs. You might find yourself ending conversations too quickly, shutting down offers of help, pushing away people who are actually on your side because your nervous system has decided that anything incoming is a threat.</p>
+      <p>The reversed Assassin says: <em>the collateral damage is real.</em> If you've already been in a season of cutting ties, setting hard boundaries, or walking away from situations, this card is asking you to pause and take inventory. Has every cut been necessary? Has every bridge you burned actually needed to go? Or did some of them get torched because it was easier to eliminate than to negotiate?</p>
+      <p>This isn't punishing you. It's pointing at something that's worth your attention. The Assassin reversed doesn't say you were wrong to protect yourself. It says the tool that served you — sharp, fast, decisive action — can become the problem if it's the only tool you reach for. May is asking you to rebuild some of what's been cut, or at minimum, to stop cutting for now.</p>
+      <div class="callout"><p>The warning: don't let your survival instinct convince you that every open hand is a threat.</p></div>
+    </div>
+    <div class="reading-section">
+      <div class="section-tag ora">Spirit's Addition · Unscheduled Message</div>
+      <h3>The Card That Showed Up Uninvited</h3>
+      <p>This card was not pulled for any position. It fell out of the Oracle deck on its own during the reading — which, in my practice, I treat as a message that insisted on being heard. It doesn't belong to the structure of the spread. It belongs to whatever needed saying that the spread didn't already cover.</p>
+      <blockquote class="card-quote"><p>The Poet wanders the corridors of the Citadel with eyes that see past the official version of events. They notice the grief behind the smile, the beauty in the broken window, the injustice in the celebration. Their gift is articulation -- the capacity to name what others feel but cannot say. This is not a passive gift. Truth-telling, in the Citadel, has always been a form of courage.</p><p class="card-orientation">UPRIGHT: Pay close attention to what you are observing around you -- your sensitivity is a data source, not a weakness. The true picture of this situation is available to you if you are willing to see past the surface version. And if there is something true that needs saying, this is the moment to say it.</p><cite>— The Citadel Oracle</cite></blockquote>
+      <p>The <span class="ci ora">Poet, upright</span>. And Markell, this card falling out on its own is significant because it directly speaks to something the rest of the reading is circling around but hasn't named plainly: <em>you see more than you let on.</em></p>
+      <p>The Poet is the archetype of someone who perceives what others miss — the real emotion underneath the performance, the truth behind the polished surface. Upright, it says your sensitivity isn't making you fragile; it's making you accurate. You are reading people and situations correctly. The instinct that tells you something's off? It's not paranoia. The feeling that a certain dynamic doesn't match the words being used? You're right.</p>
+      <p>But here's why this card jumped out of the deck: The Poet's gift isn't just seeing — it's <em>saying.</em> This card arrived to tell you that May contains a moment where something true needs to be spoken aloud. Not in anger, not as a weapon, but as an act of courage. You've been observing, collecting data, noting the discrepancies. At some point this month, the observation needs to become articulation. The Poet doesn't hoard their truth. They give it voice.</p>
+      <p>And notice how this connects to the Assassin reversed in your warning position. The Assassin cuts silently, without words. The Poet speaks. Spirit is essentially saying: <em>don't just cut people off — tell them why first.</em> The alternative to silent severance is honest speech. That's the uninvited message.</p>
+      <div class="callout"><p>You already see it. The assignment isn't to see more clearly. It's to say what you see out loud.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="reading-block reveal" id="may-lenormand">
+  <div class="layer-header">
+    <div class="layer-number">03</div>
+    <div class="layer-info"><h2>The External Terrain</h2><p>sirens' song lenormand · what's releasing & the invitation</p></div>
+    <div class="layer-bar len"></div>
+  </div>
+  <div class="spread-photo-wrap"><img src="Lenormand-Positions.jpg" alt="Sirens' Song Lenormand positions for May" loading="lazy"><div class="spread-photo-caption"><span class="caption-label">Lenormand · The External Terrain</span><span class="caption-tap">tap to zoom</span></div></div>
+  <div class="reading-text">
+    <div class="reading-section">
+      <div class="section-tag len">Position 3 · What's Releasing</div>
+      <h3>The End of Playing Small</h3>
+      <p>Lenormand is a card system that works differently from Tarot. There are no reversed cards, and each card has a tight, specific meaning — more like a word than a story. I read them left to right, and the position in the spread matters: whatever's closest to you is most immediate.</p>
+      <p>What's releasing for you in May is the <span class="ci len">Child (13)</span>. In Lenormand, the Child represents new beginnings, but it also represents innocence, smallness, inexperience, and naivety. When it falls in the "releasing" position, it means you're outgrowing something. An identity, a dynamic, a version of yourself that was defined by being new at something, or small in some arena, or not-yet-ready.</p>
+      <p>Markell, this is the version of you that enters a room already assuming you're the least experienced person there. It's the part that hedges before speaking, that qualifies every opinion with "I might be wrong, but—" It's the dynamic where someone treats you like you're still learning something you've actually already learned. May is completing that cycle. The "new kid" energy is being shed.</p>
+      <p>This connects powerfully to the Seven of Wands. You can't hold the high ground while still identifying as the person who just arrived at base camp. The Child releasing means the external reality is catching up to an internal shift that's probably already happened — you've been ready to claim a more authoritative version of yourself, and May is when the old "small" identity finally drops away for good.</p>
+      <div class="callout"><p>You're not new here anymore. May is the month the world catches up to that fact.</p></div>
+    </div>
+    <div class="reading-section">
+      <div class="section-tag len">Position 7 · The Invitation</div>
+      <h3>Love Is Trying to Get Through</h3>
+      <p>The <span class="ci len">Heart (24)</span>. The Heart in Lenormand is exactly what you'd think — love, emotion, desire, generosity, romantic feeling. It's one of the most purely positive cards in the deck. When it falls in the invitation position, the universe is extending something warm and emotionally real toward you this month.</p>
+      <p>Now, here's what makes this land so hard: remember the Four of Cups reversed in your soul lesson? That card said you've been turning away from something emotionally offered. And here's the Heart, sitting right in the "gift of the month" position, saying <em>this is what you've been turning away from.</em> The invitation is emotional openness. Love, connection, genuine warmth — whether romantic, platonic, or self-directed. It's available. It's being offered. The only question is whether you'll receive it.</p>
+      <p>In Lenormand, position matters, and the Heart sitting in the invitation position — the last Lenormand card in this spread — carries the most weight in the chain. That's a structural emphasis: this isn't a footnote, it's the headline. The external terrain of May is defined by something leaving (the Child, the smallness) and something arriving (the Heart, something real and warm). The releasing makes room for the receiving.</p>
+      <p>The mid-month planetary shifts support this. Venus moves into Cancer around May 17th, which is Venus in her most nurturing, emotionally available form — she wants to feed you, hold you, make sure you're loved. The Heart card and Venus in Cancer are singing the same note.</p>
+      <div class="callout"><p>The gift of May is simple and enormous: let yourself be loved. That's the invitation. Take it.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="reading-block reveal" id="may-kipper">
+  <div class="layer-header">
+    <div class="layer-number">04</div>
+    <div class="layer-info"><h2>The Hidden & The Closing</h2><p>sirens' song kipper · the undercurrent & the blue moon message</p></div>
+    <div class="layer-bar kip"></div>
+  </div>
+  <div class="spread-photo-wrap"><img src="Kipper-Positions.jpg" alt="Sirens' Song Kipper positions for May" loading="lazy"><div class="spread-photo-caption"><span class="caption-label">Kipper · The Hidden & The Closing</span><span class="caption-tap">tap to zoom</span></div></div>
+  <div class="reading-text">
+    <div class="reading-section">
+      <div class="section-tag kip">Position 4 · The Hidden Current</div>
+      <h3>The Woman Who Has More Than She Claims</h3>
+      <p>Kipper cards are a German divination system, and unlike Tarot, many of them depict specific types of <em>people</em> rather than abstract concepts. The direction the figure faces on the card matters — it tells you where their attention is pointed, who they're looking at, what they're engaged with. This is important for how I read what's happening beneath the surface.</p>
+      <p>Your hidden current card is <span class="ci kip">Rich Girl (12)</span>. In Kipper, the Rich Girl represents a young woman of wealth, status, or privilege — or the energy of affluence and abundance that someone carries. She faces right in the Siren's Song deck, which in a Kipper reading means she's looking forward, toward what's coming, oriented toward the future.</p>
+      <p>As the hidden current beneath May's visible events, the Rich Girl tells me something interesting: there's more abundance and resource available to you than what's visible on the surface. This might be literal — money, assets, or support you haven't fully accounted for. Or it might be energetic — you carry more weight, influence, and capital (social, professional, creative) than you're currently operating from. The Rich Girl is hidden, which means you're not performing this abundance. You might not even fully recognize it.</p>
+      <p>This is the undercurrent feeding your Seven of Wands stance. You're defending the hilltop, and underneath your feet — whether you've looked down to check or not — the ground is richer than you think. The Rich Girl as a person card could also represent a specific young woman in your life who has resources or connections that will become relevant this month. She's operating in the background for now, but her energy is part of your story whether she's visible yet or not.</p>
+      <p>The Full Moon in Scorpio on May 1st — which literally just happened as this reading was pulled — is the kind of lunation that digs up what's buried. Scorpio finds the hidden treasure and drags it into the light. The Rich Girl sitting in the hidden current position during a Scorpio full moon? That's buried abundance surfacing. Pay attention to what you discover about your own resources this month.</p>
+      <div class="callout"><p>Beneath the fight, beneath the exhaustion, you're standing on more than you realize. The hidden current of May is abundance that hasn't been claimed yet.</p></div>
+    </div>
+    <div class="reading-section">
+      <div class="section-tag kip">Position 8 · The Blue Moon Message</div>
+      <h3>You, Standing in Your Own Name</h3>
+      <p>The Blue Moon Message is how May closes — the note this month ends on, the energy you'll carry into June. A Blue Moon is a rare second full moon in a single month, and this one lands in Sagittarius on May 31st. Sagittarius energy is about the bigger picture, expansion, seeing beyond the immediate struggle to the horizon. So whatever card falls here has extra amplification: it's not just an ending, it's an opening into something larger.</p>
+      <p>Your closing card is <span class="ci kip">Siren 1</span> — which is the <strong>Main Man</strong> card in this Kipper deck. In Kipper readings, the Main Man is the primary male significator, the central figure the whole reading organizes around. In the Siren's Song deck specifically, Siren 1 is <em>me</em> — the reader's card, Jaylon's card. But when it falls in a reading for someone else, it doesn't mean "the reader shows up at the end." It means the full weight of the primary significator energy lands on the querent.</p>
+      <p>Markell, here's what this means in plain language: May ends with you fully claiming the main character position in your own story. Not as a supporting player, not as someone reacting to other people's decisions, not as the new kid, not as the defender on the hill. As the <em>central figure.</em> Siren 1 faces left in this deck, which means he's looking back — back at everything that happened during the month, back at the growth, back at what was released and what was received. By May 31st, you'll be in a position to look back at this month and see it as a turning point.</p>
+      <p>The Blue Moon in Sagittarius amplifies this with its energy of philosophical expansion. You won't just feel different. You'll <em>understand</em> why you're different. The carriages from "16 Carriages" — by the end of May, you'll know which ones you're driving and which ones you let go on purpose.</p>
+      <div class="callout"><p>May closes with you stepping fully into the center of your own life. Not earning the right to be there. Already there.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="reading-block reveal" id="synthesis">
+  <div class="layer-header">
+    <div class="layer-number">05</div>
+    <div class="layer-info"><h2>✦ The Full Picture</h2><p>synthesis · all decks woven · may 2026</p></div>
+    <div class="layer-bar syn"></div>
+  </div>
+  <div class="spread-photo-wrap"><img src="Full-Spread-Overlay.jpg" alt="Full eight-position spread overlay for May" loading="lazy"><div class="spread-photo-caption"><span class="caption-label">Full Spread · All Positions</span><span class="caption-tap">tap to zoom</span></div></div>
+  <div class="reading-text">
+    <div class="reading-section">
+      <div class="section-tag syn">✦ Synthesis</div>
+      <h3>Sixteen Carriages, One Driver</h3>
+      <p>Here's the whole story of your May, Markell, pulled together from every card across every deck.</p>
+      <p>You start the month already standing on a hill you've earned, and the <span class="ci tar">Seven of Wands</span> says the primary work of May is holding that position — not apologetically, not with one foot already backing down the slope, but with full conviction that you belong there. The pressure is real. People, circumstances, maybe your own doubt, are pushing upward. You hold anyway.</p>
+      <p>But you're not just fighting all month. <span class="ci ora">The Sleeper</span> is emerging, which means genuine rest — not collapse, not avoidance — is becoming available in a way it hasn't been before. You've been running on "16 Carriages" energy for a long time: working since you were young, giving everything to the path, watching pieces of yourself get loaded up and driven away. The Sleeper says you can rotate off the watchtower for a few hours. The battle doesn't end when you sleep. Your body just finally catches up to your spirit.</p>
+      <p>Meanwhile, beneath the surface, <span class="ci kip">Rich Girl</span> is doing her quiet work. There's hidden abundance — financial, social, creative, relational — that you haven't fully recognized or claimed. The Scorpio Full Moon that opened this month is designed to unearth exactly this kind of buried treasure. Let it surface. When you find yourself saying "I didn't realize I had that" or "I forgot I could do that" or "I didn't know they were willing to help" — that's the Rich Girl card being activated.</p>
+      <p>What's leaving is the <span class="ci len">Child</span>: the identity of smallness, newness, not-yet-ready. This is the version of you that still introduces herself with a qualifier instead of a period. She's done. Not because you've rejected her, but because you've simply outgrown her, the way you outgrow shoes — it's not personal, it's just physics. You need more room now than that identity can provide.</p>
+      <p>The soul lesson, the <span class="ci tar">Four of Cups reversed</span>, is the hinge of the whole reading. It says: in the middle of all this defending and standing and asserting, you've been emotionally closed. Not maliciously. You've been in survival mode, and survival mode narrows the aperture. Something has been offered — emotionally, relationally — and you've been staring at the ground instead of at the hand extending toward you. May is when you finally look up. The <span class="ci len">Heart</span> in the invitation position confirms this isn't hypothetical. Love, warmth, genuine connection is being offered to you this month. It's the loudest card in the Lenormand chain. Take it.</p>
+      <p>But the <span class="ci ora">Assassin reversed</span> warns that your defensive instinct — sharp, fast, decisive — has a shadow. You've been cutting. Maybe some of it was necessary. But the reversed Assassin says the blade has been swinging past the point of usefulness, and some of the bridges you've burned might have been roads you still needed. This doesn't mean your boundaries were wrong. It means the method needs refinement. You can protect yourself without scorched earth.</p>
+      <p>And that's where <span class="ci ora">The Poet</span> fell out of the deck uninvited to deliver the missing piece. The Poet says: the alternative to silent cutting is honest speaking. You see the truth of situations. You read people accurately. Your sensitivity is not a liability, it is intelligence. But the intelligence is only useful if it becomes language. The thing you need to say — to someone, about something — is available to you. May is the month to say it. Not with a blade. With your voice.</p>
+      <p>And then May closes, under a rare Blue Moon in Sagittarius, with <span class="ci kip">Siren 1</span> — the Main Man, the primary significator, the central figure of the whole reading — landing in your final position. You end this month standing in the center of your own story. Not fighting for the right to be there anymore. Just <em>there.</em> Looking back at the month with Sagittarian clarity, understanding the arc: you defended your position, you rested when you needed to, you shed an outdated smallness, you let love in, you spoke a truth that needed speaking, and you stopped confusing protection with isolation.</p>
+      <p>Pluto stations retrograde in Aquarius on May 6th, and that transit is about reassessing where your power lives — not the power other people grant you, but the power that's yours regardless. Every card in this spread is pointing at the same thing from a different angle: <em>you already have what you need.</em> The hill is yours. The abundance is underneath you. The love is in front of you. The voice is inside you. May doesn't give you anything new. It gives you permission to finally use what's been yours all along.</p>
+      <div class="callout"><p>Sixteen carriages, Markell. You've been watching them. This month, you stop watching and start driving. One set of reins. Your hands. The road ahead.</p></div>
+    </div>
+  </div>
+</div>
+</main>
+<section id="services" style="max-width:900px;margin:0 auto;padding:3rem 2rem;border-top:1px solid rgba(201,148,58,.12)">
+  <div style="font-family:'DM Mono',monospace;font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,148,58,.45);margin-bottom:1.2rem">◈ Continue the Work</div>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:.95rem;color:rgba(245,240,232,.65);line-height:1.9;margin-bottom:1.6rem">If this reading opened something you'd like to go deeper on, I offer the following:</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem">
+    <div style="border:1px solid rgba(201,148,58,.18);border-radius:3px;padding:1.1rem .9rem">
+      <div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,148,58,.7);margin-bottom:.5rem">Week Ahead</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(245,240,232,.55);line-height:1.7">A 7-card check-in for the next 7 days.</p>
+    </div>
+    <div style="border:1px solid rgba(201,148,58,.18);border-radius:3px;padding:1.1rem .9rem">
+      <div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,148,58,.7);margin-bottom:.5rem">Love &amp; Relationships</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(245,240,232,.55);line-height:1.7">What's moving, what's stalling, and what to do with it.</p>
+    </div>
+    <div style="border:1px solid rgba(201,148,58,.18);border-radius:3px;padding:1.1rem .9rem">
+      <div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,148,58,.7);margin-bottom:.5rem">Work &amp; Purpose</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(245,240,232,.55);line-height:1.7">Clarity on direction, obstacles, and timing.</p>
+    </div>
+    <div style="border:1px solid rgba(201,148,58,.18);border-radius:3px;padding:1.1rem .9rem">
+      <div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,148,58,.7);margin-bottom:.5rem">Shadow Work</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(245,240,232,.55);line-height:1.7">For when you're ready to look at the thing underneath the thing.</p>
+    </div>
+    <div style="border:1px solid rgba(201,148,58,.18);border-radius:3px;padding:1.1rem .9rem">
+      <div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,148,58,.7);margin-bottom:.5rem">General Check-In</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(245,240,232,.55);line-height:1.7">No specific question. Just: where are you right now?</p>
+    </div>
+  </div>
+  <p style="font-family:'DM Mono',monospace;font-size:.52rem;color:rgba(201,148,58,.3);letter-spacing:.12em;margin-top:1.8rem;text-align:center">Readings are offered with care and intention. Reach out when you're ready.</p>
+</section>
+<footer>
+  <div class="footer-logo">J A Y L O N</div>
+  <p>Prepared with intention &nbsp;·&nbsp; May 2, 2026</p>
+</footer>
+<script>
+const sf=document.getElementById('starfield');
+for(let i=0;i<80;i++){const s=document.createElement('div');s.className='star';s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;--dur:'+(3+Math.random()*6)+'s;--delay:'+Math.random()*5+'s;--bright:'+(0.3+Math.random()*0.5);sf.appendChild(s);}
+const _obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');_obs.unobserve(e.target);}}),{threshold:0,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>_obs.observe(el));
+document.querySelectorAll('.spread-photo-wrap img').forEach(img=>{img.addEventListener('click',e=>{e.stopPropagation();img.closest('.spread-photo-wrap').classList.add('zoomed');});});
+document.querySelectorAll('.spread-photo-wrap').forEach(w=>{w.addEventListener('click',e=>{if(e.target===w)w.classList.remove('zoomed');});});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.spread-photo-wrap.zoomed').forEach(w=>w.classList.remove('zoomed'));});
+</script>
+</body>
+</html>
